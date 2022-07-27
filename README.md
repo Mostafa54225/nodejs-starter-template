@@ -5,7 +5,7 @@ you can use this template when you start a new nodejs project
 t
 ## Installation guide
 In order to start with this project you have to follow this steps
-- git clone
+- git clone https://github.com/Mostafa54225/nodejs-starter-template.git
 - cd nodejs-starter-template
 - create .env file with simmilar variables as in the file .env.sample, with your own values
 
