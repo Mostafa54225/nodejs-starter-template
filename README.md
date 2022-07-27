@@ -11,7 +11,8 @@ In order to start with this project you have to follow this steps
 
 After that run this command
 ```bash
-yarn && yarn start
+yarn
+yarn start
 ```
 
 
