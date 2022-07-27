@@ -2,7 +2,7 @@
 this is a template to start a nodejs project it has features any starter project needs
 
 you can use this template when you start a new nodejs project
-t
+
 ## Installation guide
 In order to start with this project you have to follow this steps
 - git clone https://github.com/Mostafa54225/nodejs-starter-template.git
@@ -17,6 +17,7 @@ yarn && yarn start
 
 ## Features
 - NoSQL MongoDB
-- Authentication and authorization: using JWT 
+- Authentication and authorization: using [JWT](https://jwt.io/) 
+- Password hashing using [bcryptjs](https://www.npmjs.com/package/bcryptjs)
 - Cookies
 - Environment variables: using dotenv
