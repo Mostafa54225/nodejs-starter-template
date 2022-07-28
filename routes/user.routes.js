@@ -1,5 +1,5 @@
 const { getUsers, getUser, dashboard } = require('../controllers/user.controllers');
-const { verifyUser } = require('../utils/verifyToken');
+const { verifyUser } = require('../middleware/verifyToken');
 
 const router = require('express').Router();
 

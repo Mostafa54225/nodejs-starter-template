@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const { createCustomeError } = require('../errors/custom-error');
+const UnathentincatedError = require('../errors/unauthenticated.js');
 
 
 const verifyToken = (req, res, next) => {
@@ -15,15 +16,15 @@ const verifyToken = (req, res, next) => {
 
 const verifyUser = (req, res, next) => {
     verifyToken(req, res, () => {
-        if(req.user.id === req.params.id) next()
-        else return next(createCustomeError('You are not authorized to perform this action', 403));
+        if(req.user !== undefined && req.user.id === req.params.id) next()
+        else throw new UnathentincatedError('You are not authorized to perform this action');
     })
 }
 
 const verifyAdmin = (req, res, next) => {
     verifyToken(req, res, () => {
-        if(req.user.role === 'admin') next()
-        else return next(createCustomeError('You are not authorized to perform this action', 403));
+        if(req.user !== undefined && req.user.role === 'admin') next()
+        else throw new UnathentincatedError('You are not authorized to perform this action');
     })
 }
 
