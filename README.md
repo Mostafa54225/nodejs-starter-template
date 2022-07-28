@@ -22,3 +22,16 @@ yarn start
 - Password hashing using [bcryptjs](https://www.npmjs.com/package/bcryptjs)
 - Cookies
 - Environment variables: using dotenv
+- Error Handling
+- Validation
+
+
+## API Doc
+<strong>User Auth Routes</strong>
+- Register - POST /api/auth/register
+- Login - POST /api/auth/login
+- Logout - POST /api/auth/logout
+
+
+<strong>User Dashboard</strong>
+- Dashboard - GET /api/users/dashboard/:id
